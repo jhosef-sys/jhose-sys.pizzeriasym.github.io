@@ -28,6 +28,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  min-width: 320px;
 }
 
 a {
@@ -219,6 +220,120 @@ header {
 .hero-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 24px rgba(229, 57, 53, 0.35);
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-menu a {
+    min-width: 0;
+    flex: 1 1 180px;
+  }
+
+  .hero-subtitle-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 0.7rem 0.75rem;
+  }
+
+  .nav-logo {
+    width: 72px;
+    height: 52px;
+  }
+
+  .nav-menu {
+    gap: 0.6rem;
+  }
+
+  .nav-menu a {
+    width: 100%;
+    min-width: 0;
+    padding: 0.8rem 1rem;
+  }
+
+  .hero-section {
+    padding: 2.8rem 0.8rem 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: clamp(2.1rem, 12vw, 3.1rem);
+  }
+
+  .pizza-logo-container {
+    gap: 0.7rem;
+    margin: 2rem 0 1rem;
+  }
+
+  .pizza-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .pizza-logo--left {
+    transform: translateX(-8px);
+  }
+
+  .pizza-logo--right {
+    transform: translateX(8px);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .section,
+  .product-section,
+  .about-section,
+  .productos-shell {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-card {
+    flex-basis: 82vw;
+  }
+
+  .footer-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .music-toggle {
+    right: 0.7rem;
+    bottom: 0.7rem;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
 }
 
 .about-section {
