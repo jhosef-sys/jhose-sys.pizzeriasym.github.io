@@ -65,6 +65,14 @@ if (catalog) {
         </div>
       `;
       catalog.appendChild(article);
+
+      if (card.title === 'Docena') {
+        const aliasImage = document.createElement('img');
+        aliasImage.src = 'img/Alias.jpg';
+        aliasImage.alt = 'Alias para transferencias: mili.zamudio2020';
+        aliasImage.className = 'product-alias-image';
+        catalog.appendChild(aliasImage);
+      }
     });
   }
 
