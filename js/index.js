@@ -1,3 +1,28 @@
+// ===== Estadísticas de visitas (Google Analytics) =====
+(function () {
+  var ID = "G-Y5YLLR41WS"; // <-- poné acá tu ID
+
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + ID;
+  document.head.appendChild(s);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag("js", new Date());
+  gtag("config", ID);
+
+  // Extra: cuenta cuántos tocan el botón de WhatsApp (pedidos)
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest("a.whatsapp");
+    if (a) gtag("event", "click_whatsapp");
+  });
+})();
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const pizzaLogos = document.querySelectorAll('.pizza-logo');
 
