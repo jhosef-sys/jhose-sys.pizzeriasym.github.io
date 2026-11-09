@@ -1396,8 +1396,19 @@ body.productos-page {
     grid-template-columns: 1fr;
   }
 
+  .clientes-shell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .clientes-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .cliente-card blockquote {
+    padding: 1rem;
+    font-size: 1rem;
   }
 
   .product-alias-image {
@@ -1421,6 +1432,35 @@ body.productos-page {
 
   .clientes-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .clientes-shell {
+    padding: 1rem 0.8rem 2.5rem;
+  }
+
+  .clientes-section h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .clientes-intro {
+    margin-bottom: 1.4rem;
+    padding: 0 0.3rem;
+  }
+
+  .cliente-card {
+    border-radius: 18px;
+  }
+
+  .cliente-card img,
+  .cliente-photo-placeholder {
+    aspect-ratio: 4 / 5;
+  }
+
+  .cliente-card blockquote {
+    padding: 1rem 1.1rem 1.2rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
   }
 
   .productos-shell {
